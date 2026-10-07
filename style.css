@@ -1,0 +1,622 @@
+/** {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FFF7F0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill {
+    min-height: 180px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.skill img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.skill h2 {
+    margin: 0;
+    color: white;
+}
+
+.graphic-design {
+    background-color: #755cde;
+    grid-column: span 2;
+}
+
+.ui-ux {
+    background-color: #f6a560;
+}
+
+.apps {
+    background-color: #f39e9e;
+}
+
+.illustrations {
+    background-color: #eb7565;
+    grid-column: span 2;
+}
+
+.photography {
+    background-color: #61c4b7;
+    grid-column: span 2;
+}
+
+.motion-graphics {
+    background-color: #552049;
+    grid-column: span 2;
+}
+
+.about {
+    padding: 60px 20px 20px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #eb7565;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+}
+.my-work {
+    padding: 20px 0 60px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.my-work h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.work-images {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 0 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.work-images::-webkit-scrollbar {
+    display: none;
+}
+
+.work-image {
+    flex: 0 0 75%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.work-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.work-buttons button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+}
+
+.contact {
+    margin: 50px 20px;
+    padding: 50px 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #eb7565;
+    color: white;
+    margin-top: 15px ;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+footer {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .contact-button {
+    background-color: black;
+}
+
+footer .logo {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .logo-circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.about .contact-button {
+    background-color: #EB7565;
+}
+
+.contact .contact-button {
+    background-color: #EB7565;
+}
+
+@media screen and (min-width: 768px) {
+
+    .intro {
+        padding: 60px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 30px 40px;
+    }
+
+    .about {
+        padding: 80px 60px;
+    }
+
+    .about-text {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .work-image {
+        flex: 0 0 45%;
+        height: 300px;
+    }
+
+    .contact {
+        margin: 70px 40px;
+        padding: 60px;
+    }
+
+    footer {
+        padding: 30px 40px;
+    }
+    
+}
+/* TABLET 
+@media (min-width: 768px) {
+    .skills {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 680px;
+        margin: auto;
+    }
+
+    .graphic-design,
+    .illustrations,
+    .photography,
+    .motion-graphics {
+        grid-column: span 2;
+    }
+
+    .graphic-design {
+        grid-row: span 2;
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .work-image {
+        flex: 0 0 45%;
+    }
+
+    .contact {
+        margin: 70px 40px;
+    }
+}
+
+/* DESKTOP 
+@media (min-width: 1024px) {
+    .skills,
+    .about,
+    .contact {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about {
+        gap: 80px;
+    }
+
+    .work-images {
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .work-image {
+        flex: 0 0 30%;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FFF7F0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-mark {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.hero-intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-intro h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-intro p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.design-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.design-card {
+    min-height: 180px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.design-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.graphic-card {
+    background-color: #755cde;
+    grid-column: span 2;
+}
+
+.ui-card {
+    background-color: #f6a560;
+}
+
+.apps-card {
+    background-color: #f39e9e;
+}
+
+.illustration-card {
+    background-color: #eb7565;
+    grid-column: span 2;
+}
+
+.photography-card {
+    background-color: #61c4b7;
+    grid-column: span 2;
+}
+
+.motion-card {
+    background-color: #552049;
+    grid-column: span 2;
+}
+
+.about-amy {
+    padding: 60px 20px 20px;
+    text-align: center;
+}
+
+.amy-photo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.amy-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.amy-description h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.amy-description p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.consultation-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #EB7565;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.portfolio-work {
+    padding: 20px 0 60px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.portfolio-work h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.portfolio-images {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 0 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.portfolio-images::-webkit-scrollbar {
+    display: none;
+}
+
+.portfolio-image {
+    flex: 0 0 75%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.portfolio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.portfolio-buttons button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+}
+
+.contact-area {
+    margin: 50px 20px;
+    padding: 50px 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.contact-area h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.contact-area p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.contact-area .consultation-btn {
+    display: inline-block;
+    background-color: #EB7565;
+    color: white;
+}
+
+footer {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .consultation-btn {
+    background-color: black;
+}
+
+footer .brand-mark {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .brand-circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
